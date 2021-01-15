@@ -30,7 +30,7 @@ public class homeController {
 		return "certification.html";
 	}
 	
-	@RequestMapping("/contact")
+	@RequestMapping("/contactus")
 	public String contact() {
 		
 		return "contact.html";

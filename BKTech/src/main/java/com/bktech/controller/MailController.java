@@ -15,12 +15,12 @@ public class MailController {
 	
 	private final MailService mailService;
 
-    @GetMapping("/mail")
+    @GetMapping("/contact")
     public String dispMail() {
         return "contact";
     }
 
-    @PostMapping("/mail")
+    @PostMapping("/contact")
     public void execMail(MailDto mailDto) {
         mailService.mailSend(mailDto);
     }
