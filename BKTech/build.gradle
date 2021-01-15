@@ -15,7 +15,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-java8time'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'org.springframework.boot:spring-boot-starter-mail'
+	compile 'com.sun.mail:javax.mail'
+	compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
