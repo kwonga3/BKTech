@@ -10,6 +10,6 @@
 //public class MailDto {
 //
 //	 private String address;
-//	 private String title;
+//	 private String subject;
 //	 private String message;
 //}
