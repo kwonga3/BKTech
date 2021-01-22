@@ -58,5 +58,17 @@ public class homeController {
 		
 		return "hamche.html";
 	}
+	
+	@RequestMapping("/product")
+	public String product() {
+		
+		return "product.html";
+	}
+	
+	@RequestMapping("/etc")
+	public String etc() {
+		
+		return "etc.html";
+	}
 
 }

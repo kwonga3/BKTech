@@ -13,13 +13,13 @@
 //public class MailService {
 //
 //	private JavaMailSender mailSender;
-//    private static final String TO_ADDRESS = "kwonga3@naver.com";
+//    private static final String FROM_ADDRESS = "kwonga3@naver.com";
 //
 //    public void mailSend(MailDto mailDto) {
 //    	SimpleMailMessage message = new SimpleMailMessage();
-//        message.setFrom(mailDto.getAddress());
-//        message.setTo(MailService.TO_ADDRESS);
-//        message.setSubject(mailDto.getTitle());
+//        message.setTo(mailDto.getAddress());
+//        message.setFrom(MailService.FROM_ADDRESS);
+//        message.setSubject(mailDto.getSubject());
 //        message.setText(mailDto.getMessage());
 //
 //        mailSender.send(message);
