@@ -149,7 +149,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form th:action="@{forms/contact.php}" method="post" role="form" class="php-email-form">
+            <form action="contact.php" method="post" role="form" class="php-email-form" data-recaptcha-site-key = "Your_reCAPTCHA_site_key">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="이름" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -180,6 +180,7 @@
         </div>
 
       </div>
+      
     </section><!-- End Contact Section -->
 
     <!-- ======= Map Section ======= -->
@@ -345,6 +346,7 @@ infowindow.open(map, marker);
   <script th:src="@{assets/vendor/owl.carousel/owl.carousel.min.js}"></script>
   <script th:src="@{assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
   <script th:src="@{assets/vendor/aos/aos.js}"></script>
+  <script th:src="@{https://www.google.com/recaptcha/api.js?render=Your_reCAPTCHA_site_key}"></script>
 
   <!-- Template Main JS File -->
   <script th:src="@{assets/js/main.js}"></script>
