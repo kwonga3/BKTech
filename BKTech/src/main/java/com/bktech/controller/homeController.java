@@ -70,5 +70,11 @@ public class homeController {
 		
 		return "etc.html";
 	}
+	
+	@RequestMapping("/sitemap")
+	public String sitemap() {
+		
+		return "sitemap.xml";
+	}
 
 }
