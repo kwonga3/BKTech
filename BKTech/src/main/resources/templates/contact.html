@@ -148,39 +148,66 @@
 
           </div>
 
-          <div class="col-lg-6">
-            <form th:action="@{http://www.bk-tech.co.kr/forms/contact.php}" method="post" role="form" class="php-email-form">
+          <div class="php-email-form">
+            <!-- <form th:action="@{http://www.bk-tech.co.kr/forms/contact.php}" method="post" role="form" class="php-email-form"> -->
+              <!-- <form action="" role="form"> -->
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="이름 or 회사명" data-rule="minlen:4" data-msg="4자이상 입력하세요" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="이메일" data-rule="email" data-msg="이메일을 입력하세요" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="제목" data-rule="minlen:4" data-msg="제목을 8자이상 입력하세요" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="내용을 입력하세요" placeholder="내용입력"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+              </div> -->
+              <div class="text-center"><button type="submit" name="submit">이메일 보내기</button></div>
+                  <!-- Template emailJS File -->
+              <script th:src="@{assets/vendor/jquery/jquery.min.js}"></script>
+              <script type="text/javascript" th:src="@{https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js}"></script>
+              <script type="text/javascript">
+	
+            $(document).ready(function() {
+              emailjs.init("user_72NkELf34dlP4k9mYzUAK");		
+                //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+
+                $('button[name=submit]').click(function(){       	 
+                  var templateParams = {	
+                  //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+                        name: $('input[name=name]').val(),
+                        subject: $('input[name=subject]').val(), 
+                        email : $('input[name=email]').val(),
+                        message : $('textarea[name=message]').val()
+                          };
+                            
+                emailjs.send('gmail', 'template_h9e1hxn', templateParams)
+                //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+                      .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert("메일 보내기 완료")
+                        location.reload();
+                      }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+                });
+            });
+          </script>
           </div>
-
         </div>
-
       </div>
-      
     </section><!-- End Contact Section -->
 
     <!-- ======= Map Section ======= -->
