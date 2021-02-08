@@ -4,10 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="naver-site-verification" content="8a6032bae7c16e34bdbe094414adbfe147e58d85" />
 
   <title>회사소개</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <meta name="description" content="cctv 폴, 함체, 신호등, 태양광 폴등 주문제작">
+  <meta name="keywords" content="" >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="회사소개">
+  <meta property="og:description" content="cctv 폴, 함체, 신호등, 태양광 폴등 주문제작">
 
   <!-- Favicons -->
   <link th:href="@{assets/img/favicon.png}" rel="icon">
@@ -46,12 +50,6 @@
 	.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}            
   </style>
 
-  <!-- =======================================================
-  * Template Name: Moderna - v2.0.1
-  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -61,7 +59,7 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a th:href="@{/}"><img alt="" src="assets/img/main/bktech-logo.png"></a></h1>
+        <h1 class="text-light"><a th:href="@{/}"><img alt="" th:src="@{assets/img/main/bktech-logo.png}"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -120,7 +118,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/about2.jpg" class="img-fluid" alt="">
+            <img th:src="@{assets/img/about2.jpg}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <h3>CEO인사말</h3>
@@ -153,7 +151,7 @@
     
         </div>
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2e4e6a6d761103f5a710b84edbfb77db"></script>
+  <script type="text/javascript" th:src="@{//dapi.kakao.com/v2/maps/sdk.js?appkey=2e4e6a6d761103f5a710b84edbfb77db}"></script>
         <script>
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
