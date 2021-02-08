@@ -4,10 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="naver-site-verification" content="8a6032bae7c16e34bdbe094414adbfe147e58d85" />
 
   <title>e-카다로그</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <meta name="description" content="cctv 폴, 함체, 신호등, 태양광 폴등 주문제작">
+  <meta name="keywords" content="" >
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="e-카다로그">
+  <meta property="og:description" content="cctv 폴, 함체, 신호등, 태양광 폴등 주문제작">
 
   <!-- Favicons -->
   <link th:href="@{assets/img/favicon.png}" rel="icon">
@@ -28,12 +32,6 @@
   <!-- Template Main CSS File -->
   <link th:href="@{assets/css/style.css}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Moderna - v2.0.1
-  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -43,7 +41,7 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a th:href="@{/}"><img alt="" src="assets/img/main/bktech-logo.png"></a></h1>
+        <h1 class="text-light"><a th:href="@{/}"><img alt="" th:src="@{assets/img/main/bktech-logo.png}"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -115,103 +113,21 @@
 
           <div class="col-lg-4 col-md-6 filter-app">
             <div class="portfolio-item">
-              <img src="assets/img/catalog/catalog.png" class="img-fluid" alt="">
+              <img th:src="@{assets/img/catalog/catalog.png}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/catalog/catalog.png" data-gall="portfolioGallery" class="venobox" title="카다로그 1">카다로그 1</a></h3>
-                <a href="assets/img/catalog/catalog.png" data-gall="portfolioGallery" class="venobox" title="카다로그 1"><i class="icofont-plus"></i></a>
+                <h3><a th:href="@{assets/img/catalog/catalog.png}" data-gall="portfolioGallery" class="venobox" title="카다로그 1">카다로그 1<br><i class="icofont-plus"></i></a></h3>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 filter-app">
             <div class="portfolio-item">
-              <img src="assets/img/catalog/catalog2.png" class="img-fluid" alt="">
+              <img th:src="@{assets/img/catalog/catalog2.png}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/catalog/catalog2.png" data-gall="portfolioGallery" class="venobox" title="카다로그 2">카다로그 2</a></h3>
-                <a href="assets/img/catalog/catalog2.png" data-gall="portfolioGallery" class="venobox" title="카다로그 2"><i class="icofont-plus"></i></a>
+                <h3><a th:href="@{assets/img/catalog/catalog2.png}" data-gall="portfolioGallery" class="venobox" title="카다로그 2">카다로그 2<br><i class="icofont-plus"></i></a></h3>
               </div>
             </div>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3">Web 3</a></h3>
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-app">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2">App 2</a></h3>
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2">Card 2</a></h3>
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2">Web 2</a></h3>
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-app">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3">App 3</a></h3>
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1">Card 1</a></h3>
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3">Card 3</a></h3>
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1">Web 1</a></h3>
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1"><i class="icofont-plus"></i></a>
-              </div>
-            </div>
-          </div> -->
 
         </div>
 
